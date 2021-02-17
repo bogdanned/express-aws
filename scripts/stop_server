@@ -1,6 +1,7 @@
 #!/bin/bash
-# isExistApp="pgrep httpd"
-#if [[ -n  $isExistApp ]]; then
-#    service httpd stop
-#fi
+echo "Stoping the previous version ..."
+isExistApp="pgrep httpd"
+if [[ -n  $isExistApp ]]; then
+    service httpd stop
+fi
 pkill -f node
