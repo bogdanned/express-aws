@@ -3,6 +3,8 @@ os: linux
 files:
 - source: /src
   destination: /home/ec2-user/node-website/src
+- source: /build
+  destination: /home/ec2-user/node-website/build
 - source: /package.json
   destination: /home/ec2-user/node-website
 - source: /node_modules
