@@ -25,6 +25,10 @@ hooks:
   - location: scripts/install_httpd
     timeout: 300
     runas: root
+  ValidateService:
+  - location: scripts/fetch_secrets.sh
+    timeout: 300
+    runas: root
   ApplicationStart:
   - location: scripts/start_server
     timeout: 300
