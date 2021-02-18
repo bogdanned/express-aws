@@ -30,10 +30,17 @@ Parameters:
     Type: String
     Description: The name for a project pipeline stage, such as Staging or Prod, for which resources are provisioned and deployed.
     Default: ''
+  MONGO_URL_PARAM:
+    Type: String
+    Description: The url to the mongo pipeline.
+    Default: ''
 Resources:
   WebApp01:
     Description: The installation and configuration commands this project will use to create instances that support this sample web application.
     Properties:
+      Environment:
+        Variables:
+          MONGO_URL: !Ref MONGO_URL_PARAM
       CreditSpecification:
         CPUCredits: !If [IsBurstableInstanceType, unlimited, !Ref 'AWS::NoValue']
       IamInstanceProfile: !Ref 'WebAppInstanceProfile'
