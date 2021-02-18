@@ -8,6 +8,6 @@
       "outDir": "build", 
       "esModuleInterop": true
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "**/*.spec.ts","scripts"]
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
 }
