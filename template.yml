@@ -31,7 +31,7 @@ Parameters:
     Description: The name for a project pipeline stage, such as Staging or Prod, for which resources are provisioned and deployed.
     Default: ''
   MONGO_URL_PARAM:
-    Type: String
+    Type: 'AWS::SSM::Parameter::Value<String>'
     Description: The url to the mongo pipeline.
     Default: ''
 Resources:
